@@ -8,13 +8,13 @@ import (
 	"os"
 	"os/signal"
 	"path"
-	"path/filepath"
 	"strings"
 	"syscall"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"github.com/roffe/txlogger/pkg/cangw"
+	"github.com/roffe/txlogger/pkg/common"
 	"github.com/roffe/txlogger/pkg/debug"
 	"github.com/roffe/txlogger/pkg/ipc"
 	"github.com/roffe/txlogger/pkg/presets"
@@ -49,24 +49,11 @@ func signalHandler(mw *windows.MainWindow) {
 	//fyne.CurrentApp().Driver().Quit()
 }
 
-func createtxloggerDir() error {
-	homeDir, err := os.UserHomeDir()
-	if err != nil {
-		log.Printf("could not determine user home directory: %v", err)
-	}
-	path := filepath.Join(homeDir, "txlogger")
-	path = filepath.Join(path, "logs")
-	if err := os.MkdirAll(path, os.ModePerm); err != nil {
-		return fmt.Errorf("could not create directory: %v", err)
-	}
-	return nil
-}
-
 func main() {
 	InitConsole()
 
 	// create txlogger dir in user home for debug log and such
-	if err := createtxloggerDir(); err != nil {
+	if err := common.CreatetxloggerDir(); err != nil {
 		log.Printf("error creating txlogger dir in user home: %v", err)
 	}
 

@@ -10,7 +10,7 @@ go 1.25.5
 replace go.einride.tech/can => github.com/samuelbrian/can-go v0.0.2
 
 require (
-	fyne.io/fyne/v2 v2.7.3-0.20260204124736-c6356eff6ac7
+	fyne.io/fyne/v2 v2.7.4-0.20260223203311-84d728683911
 	fyne.io/x/fyne v0.0.0-20260128204654-7fd4ce591d29
 	github.com/avast/retry-go/v4 v4.7.0
 	github.com/lusingander/colorpicker v0.7.5
@@ -18,7 +18,6 @@ require (
 	github.com/pion/mdns/v2 v2.1.0
 	github.com/roffe/ecusymbol v1.1.0
 	github.com/roffe/gocan v1.3.5
-	github.com/sqweek/dialog v0.0.0-20260123140253-64c163d53aac
 	go.bug.st/serial v1.6.4
 	golang.org/x/image v0.36.0
 	golang.org/x/mod v0.33.0
@@ -31,6 +30,7 @@ require (
 require (
 	github.com/Microsoft/go-winio v0.6.2
 	github.com/ebitengine/oto/v3 v3.4.0
+	github.com/godbus/dbus/v5 v5.2.2
 	github.com/hajimehoshi/go-mp3 v0.3.4
 	golang.org/x/sys v0.41.0
 )
@@ -39,7 +39,6 @@ require (
 	fyne.io/systray v1.12.0 // indirect
 	github.com/BurntSushi/toml v1.6.0 // indirect
 	github.com/FyshOS/fancyfs v0.0.1 // indirect
-	github.com/TheTitanrain/w32 v0.0.0-20200114052255-2654d97dbd3d // indirect
 	github.com/albenik/bcd v0.0.0-20170831201648-635201416bc7 // indirect
 	github.com/bendikro/dl v0.0.0-20190410215913-e41fdb9069d4 // indirect
 	github.com/creack/goselect v0.1.3 // indirect
@@ -56,7 +55,6 @@ require (
 	github.com/go-gl/glfw/v3.3/glfw v0.0.0-20250301202403-da16c1255728 // indirect
 	github.com/go-text/render v0.2.0 // indirect
 	github.com/go-text/typesetting v0.3.3 // indirect
-	github.com/godbus/dbus/v5 v5.2.2 // indirect
 	github.com/golang/mock v1.6.0 // indirect
 	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/google/gousb v1.1.3 // indirect

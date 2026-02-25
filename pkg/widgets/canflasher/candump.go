@@ -10,11 +10,15 @@ import (
 	"fyne.io/fyne/v2"
 	"github.com/roffe/gocan"
 	"github.com/roffe/txlogger/pkg/ecu"
-	sdialog "github.com/sqweek/dialog"
+	"github.com/roffe/txlogger/pkg/native"
 )
 
 func (t *CanFlasherWidget) ecuDump() {
-	filename, err := sdialog.File().Filter("Bin file", "bin").Title("Save bin file").Save()
+
+	filename, err := native.SaveFileDialog("Bin file", "bin", native.FileFilter{
+		Description: "Bin file",
+		Extensions:  []string{"bin"},
+	})
 	if err != nil {
 		t.log(err.Error())
 		return

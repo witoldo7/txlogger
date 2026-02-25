@@ -1,9 +1,13 @@
 export CC=clang
 
 CANINTERFACES=canlib,canusb,combi,ftdi,j2534,pcan,rcan,socketcan
+OTHER=wayland
 
-BUILDTAGS=$(CANINTERFACES)
+BUILDTAGS=$(CANINTERFACES),$(OTHER)
 
+ifdef EXTRA_TAGS
+BUILDTAGS:=$(CANINTERFACES),$(EXTRA_TAGS)
+endif
 
 default: txlogger
 
@@ -16,9 +20,9 @@ txlogger:
 release:
 	fyne package -tags=$(BUILDTAGS) --release
 
-run: cangateway
+run: clean cangateway
 	@echo Using compiler "$(CC)"
-	go run -tags=$(BUILDTAGS) . 2>&1 | tee run.log
+	-go run -tags=$(BUILDTAGS) . 2>&1 | tee run.log
 
 clean:
 	rm -f cangateway

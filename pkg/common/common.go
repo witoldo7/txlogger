@@ -48,33 +48,43 @@ func SanitizeFilename(name string) string {
 }
 
 func GetLogPath() (string, error) {
-	dir, err := getUserHomeDir()
+	dir, err := GetUserHomeDir()
 	if err != nil {
 		return "", err
 	}
-	logPath := getComponentPath(dir, "logs")
+	logPath := GetComponentPath(dir, "logs")
 	return logPath, createDirIfNotExists(logPath)
 }
 
 func GetBinPath() (string, error) {
-	dir, err := getUserHomeDir()
+	dir, err := GetUserHomeDir()
 	if err != nil {
 		return "", err
 	}
-	binPath := getComponentPath(dir, "bins")
+	binPath := GetComponentPath(dir, "bins")
 	return binPath, createDirIfNotExists(binPath)
 }
 
-func getComponentPath(base, typ string) string {
+func GetComponentPath(base, typ string) string {
 	return filepath.Join(base, "txlogger", typ)
 }
 
-func getUserHomeDir() (string, error) {
+func GetUserHomeDir() (string, error) {
 	dir, err := os.UserHomeDir()
 	if err != nil {
 		return "", fmt.Errorf("could not determine user home directory: %v", err)
 	}
 	return dir, nil
+}
+
+func CreatetxloggerDir() error {
+	homeDir, err := os.UserHomeDir()
+	if err != nil {
+		return fmt.Errorf("could not determine user home directory: %w", err)
+	}
+	path := filepath.Join(homeDir, "txlogger")
+	path = filepath.Join(path, "logs")
+	return createDirIfNotExists(path)
 }
 
 func createDirIfNotExists(path string) error {

@@ -59,11 +59,6 @@ type openfilenameW struct {
 	FlagsEx           uint32
 }
 
-type FileFilter struct {
-	Description string
-	Extensions  []string
-}
-
 func OpenFileDialog(title string, filters ...FileFilter) (string, error) {
 	// Buffer for the returned path (must be preallocated)
 	fileBuf := make([]uint16, MAX_PATH)

@@ -7,8 +7,13 @@ import (
 )
 
 var (
-	ErrCancelled = errors.New("cancelled")
+	ErrCancelled = errors.New("Cancelled")
 )
+
+type FileFilter struct {
+	Description string
+	Extensions  []string
+}
 
 func utf16ptr(utf16 []uint16) *uint16 {
 	if utf16[len(utf16)-1] != 0 {
