@@ -116,8 +116,8 @@ github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 h1:Jamvg5psRI
 github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/roffe/ecusymbol v1.1.0 h1:5BwN+w7Rpooo6LD/eB/Wawz+ZI1Az2Yq4BjYrAc91rk=
 github.com/roffe/ecusymbol v1.1.0/go.mod h1:P53NLPps1rW3BEDM8QZtx9F0clYkA+cQUzc2arbtvrA=
-github.com/roffe/gocan v1.3.5 h1:rs+BzvgCoTzp5YaJLD5tmj7Bmp9D6BGNFAyqrdY0r+o=
-github.com/roffe/gocan v1.3.5/go.mod h1:+Iv2n6O0PqeZ098qy8CbM4iQ+grq25tO1OvpwtfO9mw=
+github.com/roffe/gocan v1.3.6 h1:4V4hBoC0C18N9rTzHzFP+3RKqT6pAik+oERq3xBzccY=
+github.com/roffe/gocan v1.3.6/go.mod h1:+Iv2n6O0PqeZ098qy8CbM4iQ+grq25tO1OvpwtfO9mw=
 github.com/rogpeppe/go-internal v1.9.0/go.mod h1:WtVeX8xhTBvf0smdhujwtBcq4Qrzq/fJaraNFVN+nFs=
 github.com/rogpeppe/go-internal v1.14.1 h1:UQB4HGPB6osV0SQTLymcB4TgvyWu6ZyliaW0tI/otEQ=
 github.com/rogpeppe/go-internal v1.14.1/go.mod h1:MaRKkUm5W0goXpeCfT7UZI6fk/L7L7so1lCWt35ZSgc=

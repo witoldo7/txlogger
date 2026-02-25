@@ -17,7 +17,7 @@ require (
 	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646
 	github.com/pion/mdns/v2 v2.1.0
 	github.com/roffe/ecusymbol v1.1.0
-	github.com/roffe/gocan v1.3.5
+	github.com/roffe/gocan v1.3.6
 	go.bug.st/serial v1.6.4
 	golang.org/x/image v0.36.0
 	golang.org/x/mod v0.33.0
