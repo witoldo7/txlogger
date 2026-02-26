@@ -504,6 +504,18 @@ func (t *Client) ReadFlash(ctx context.Context, device byte, lastAddress int) ([
 	return buf, nil
 }
 
+func (t *Client) WriteFlash(ctx context.Context, device byte, lastAddress int, flashData []byte, z22se bool) error {
+	if !t.legionRunning {
+		return fmt.Errorf("legion not running")
+	}
+	const startAddress = 0x020000
+
+	if err := t.gm.TransferData(ctx, 0x00, 0xF0, startAddress); err != nil {
+		return err
+	}
+	return nil
+}
+
 const (
 	SetInterFrameLatency     Command = 0x00
 	GetCRC32                 Command = 0x01
